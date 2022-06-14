@@ -9,7 +9,7 @@ RUN apk --no-cache add unzip \
     && echo -n "${SHA256SUM}  hath.zip" | sha256sum -c \
     && unzip hath.zip -d /hath \
     && cd /hath \
-    && mkdir -p /hath/data \
+    && mkdir -p /hath/data/data \
     && mkdir -p /hath/download
 
 FROM azul/zulu-openjdk-alpine:18-jre AS release

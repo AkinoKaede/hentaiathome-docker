@@ -22,7 +22,7 @@ java -jar HentaiAtHome.jar --cache-dir=/hath/data/cache \
     --data-dir=/hath/data/data \
     --download-dir=/hath/download \
     --log-dir=/hath/data/log \
-    --temp-dir=/hath/data/temp \ 
+    --temp-dir=/hath/data/temp \
     $* &
 
 wait $!
