@@ -12,7 +12,7 @@ RUN apk --no-cache add unzip \
     && mkdir -p /hath/data/data \
     && mkdir -p /hath/download
 
-FROM azul/zulu-openjdk-alpine:18-jre AS release
+FROM eclipse-temurin:11 AS release
 
 COPY --from=builder /hath /hath
 COPY scripts/run.sh /hath/run.sh
