@@ -18,7 +18,8 @@ COPY --from=builder /hath /hath
 COPY scripts/run.sh /hath/run.sh
 WORKDIR /hath
 
-RUN apk --no-cache add sqlite \
+RUN apt update \
+    && apt install -y sqlite3 \
     && chmod +x /hath/run.sh
 
 VOLUME [ "/hath/data" , "/hath/download" ]
